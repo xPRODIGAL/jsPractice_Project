@@ -24,6 +24,15 @@ function setMovieData(movieIndex, moviePrice) {
 }
 
 // 数据更新函数 将点击作为index存储到Storage中
+
+// 方法补充：
+// map() --> array.map(function(currentValue,index,arr), thisValue)
+// map() 方法返回一个新数组，数组中的元素为原始数组元素调用函数处理后的值。
+// map() 方法按照原始数组元素顺序依次处理元素。
+
+// indexOf() --> string.indexOf(searchvalue,start)
+// 1> indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+// 2> 如果没有找到匹配的字符串则返回 -1。
 function updateSelectCount() {
   const selectedSeats = document.querySelectorAll(".row .seat.selected")
 
