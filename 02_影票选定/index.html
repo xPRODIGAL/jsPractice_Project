@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>影票选定</title>
+</head>
+<body>
+  <h1>欢迎进入大地影院</h1>
+  <div class="movie-container">
+    <label for="">选择影片：</label>
+    <select name="" id="movie">
+      <option value="33">杀破狼（票价33元）</option>
+      <option value="42">战狼（票价42元）</option>
+      <option value="38">机器人总动员（票价38元）</option>
+      <option value="20">建军大业（票价20元）</option>
+    </select>
+  </div>
+
+  <ul class="showcase">
+    <li>
+      <div class="seat"></div>
+      <small>可选</small>
+    </li>
+    <li>
+      <div class="seat selected"></div>
+      <small>已选</small>
+    </li>
+    <li>
+      <div class="seat occupied"></div>
+      <small>不可选</small>
+    </li>
+  </ul>
+
+  <div class="container">
+    <div class="screen"></div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+      <div class="seat occupied"></div>
+    </div>
+
+    <div class="row">
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+      <div class="seat"></div>
+    </div>
+
+    <p class="text">
+      您已经选择：<span id="count">0</span>座位， 
+      总计票价：<span id="total">0</span>元
+    </p>
+
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
