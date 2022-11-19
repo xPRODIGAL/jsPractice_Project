@@ -22,7 +22,7 @@ body {
 }
 
 aside {
-  padding: 10px 20px;
+  padding: 0 20px;
   width: 260px;
   border-right: 1px solid #111;
 }
@@ -40,7 +40,7 @@ button {
 
 main {
   flex: 1;
-  padding: 0 15px;
+  padding: 10px 15px;
 }
 
 h2 {
@@ -50,4 +50,11 @@ h2 {
   justify-content: space-between;
   font-weight: 300;
   margin: 0 0 20px;
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  margin: 8px auto;
 }
