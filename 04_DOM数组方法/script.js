@@ -6,6 +6,9 @@ const calculateBtn = document.getElementById("calculate-wealth")
 const main = document.getElementById("main")
 
 getRandomUser()
+getRandomUser()
+getRandomUser()
+getRandomUser()
 
 let usersData = []
 
@@ -27,7 +30,7 @@ async function getRandomUser() {
 
 function addUsersData(obj) {
   usersData.push(obj)
-  console.log(usersData)
+  // console.log(usersData)
   updateDOM()
 }
 
@@ -47,9 +50,9 @@ function updateDOM(providedData = usersData) {
 
 // 货币正则转换
 function formatMoney(number) {
-  console.log(typeof number)
+  // console.log(typeof number)
   let val = (number/1).toFixed(2).replace(',', '.')
-  return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  return "$" + val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
 
 // 资金翻倍
@@ -60,6 +63,33 @@ function doubleMoney() {
   updateDOM()
 }
 
+// sort排序
+function sortByRichest() {
+  usersData.sort((a, b) => b.money - a.money)
+
+  updateDOM()
+}
+
+// filter过滤
+function showRichMans() {
+  usersData = usersData.filter(user => user.money > 10000000)
+
+  updateDOM()
+}
+
+// reduce
+function calculateBtnWealth() {
+  const wealth = usersData.reduce((acc, user) => (acc += user.money), 0)
+
+  // console.log(formatMoney(wealth))
+  const wealthEl = document.createElement("div")
+  wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(wealth)}</strong></h3>`
+  main.appendChild(wealthEl)
+}
+
 // 添加事件点击
 addUserBtn.addEventListener("click", getRandomUser)
 doubleBtn.addEventListener("click", doubleMoney)
+sortBtn.addEventListener("click", sortByRichest)
+showBtn.addEventListener("click", showRichMans)
+calculateBtn.addEventListener("click", calculateBtnWealth)
