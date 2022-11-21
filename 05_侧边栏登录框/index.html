@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>侧边栏</title>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="img/boy.jpg" alt="">
+    </div>
+    <ul>
+      <li><a href="#">主页</a></li>
+      <li><a href="#">关于</a></li>
+      <li><a href="#">课程</a></li>
+      <li><a href="#">联系</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <button class="toggle" id="toggle">
+      <i class="fa fa-bars fa-2x"></i>
+    </button>
+
+    <h1>欢迎进入用户系统</h1>
+    <p>
+      总结Vue知识点，全都会你就是niuniu
+    </p>
+    <button class="cta-btn" id="open">登录</button>
+  </header>
+
+  <div class="container">
+    <h2>Vue的优点？Vue的缺点？</h2>
+    <p>
+      优点：渐进式，组件化，轻量级，虚拟dom，响应式，单页面路由，数据与视图分开
+      缺点：单页面不利于seo，不支持IE8以下，首屏加载时间长
+    </p>
+    <h2>Vue跟React的异同点？</h2>
+    <ul>
+      <h3>相同点</h3>
+      <li>都使用了虚拟dom</li>
+      <li>组件化开发</li>
+      <li>都是单向数据流(父子组件之间，不建议子修改父传下来的数据)</li>
+      <li>都支持服务端渲染</li>
+    </ul>
+    <ul>
+      <h3>不同点</h3>
+      <li>React的JSX，Vue的template</li>
+      <li>数据变化，React手动(setState)，Vue自动(初始化已响应式处理，Object.defineProperty)</li>
+      <li>React单向绑定，Vue双向绑定</li>
+      <li>React的Redux，Vue的Vuex</li>
+    </ul>
+
+    <!-- 登录框 -->
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h3>登录</h3>
+        </div>
+        <div class="modal-content">
+          <p>登录了解更多</p>
+          <form action="" class="modal-form">
+            <div>
+              <label for="name">姓名</label>
+              <input type="text" id="name" placeholder="请输入姓名" class="form-input">
+            </div>
+            <div>
+              <label for="email">邮箱</label>
+              <input type="text" id="email" placeholder="请输入邮箱" class="form-input">
+            </div>
+            <div>
+              <label for="password">密码</label>
+              <input type="password" id="password" placeholder="请输入密码" class="form-input">
+            </div>
+            <div>
+              <label for="password2">确认密码</label>
+              <input type="password" id="password2" placeholder="请输入确认密码" class="form-input">
+            </div>
+            <input type="submit" value="提交" class="submit-btn">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
