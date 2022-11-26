@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="style.css">
+  <title>食谱查询器</title>
+</head>
+<body>
+  <div class="container">
+    <h1>食谱查询</h1>
+
+    <div class="flex">
+      <form id="submit" class="flex">
+        <input type="text" id="search" placeholder="请输入食物名或关键字...">
+        <button class="search-btn" type="submit" id="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <button class="random-btn" id="random">
+        <i class="fas fa-random"></i>
+      </button>
+    </div>
+
+    <div id="result-heading"></div>
+    <div id="meals" class="meals"></div>
+    <div id="single-meal"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
