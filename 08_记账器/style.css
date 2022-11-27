@@ -1,0 +1,144 @@
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  --plus-color: #2ecc71;
+  --minus-color: #c0392b;
+  --delete-btn: #e74c3c;
+  --add-btn: #9c88ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+}
+
+h1 {
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: var(--plus-color);
+}
+
+.money.minus {
+  color: var(--minus-color);
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #dedede;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--add-btn);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  margin: 20px 0;
+  font-size: 16px;
+  border: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.minus {
+  border-right: 5px solid var(--minus-color);
+}
+
+.list li.plus {
+  border-right: 5px solid var(--plus-color);
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: var(--delete-btn);
+  border: 0;
+  color: #fff;
+  position: absolute;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 6px 8px;
+  top: 50%;
+  left: 0;
+  transform: translate(-110%, -50%);
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.list li:hover .delete-btn{
+  opacity: 1;
+}
