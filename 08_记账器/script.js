@@ -10,8 +10,7 @@ const balance = document.getElementById("balance"),
 const dummyTransactions = [
   { id: 1, text: "鲜花", amount: -20 },
   { id: 2, text: "薪酬", amount: 300 },
-  { id: 3, text: "书籍", amount: -10 },
-  { id: 4, text: "相机", amount: 150 }
+  { id: 3, text: "书籍", amount: -10 }
 ];
 
 let transactions = dummyTransactions;
